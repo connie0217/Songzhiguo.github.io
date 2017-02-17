@@ -1,0 +1,710 @@
+/************
+ * 页面样式
+ ************/
+
+/* ==========
+   基本默认值
+   ========== */
+body {
+    font: 12px/1.5 "Microsoft YaHei",arial,SimSun,"宋体";
+    color: #666;
+}
+ul,dl,dd,dt {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+a {
+    color: #424e67;
+    text-decoration: none;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+#layout {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    min-width: 1103px;
+    background: #eff4f8;
+}
+/* ==========头部========== */
+#header {
+    position: absolute;
+    top:0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 62px;
+    background: #eff4f8;
+}
+#header .header-main {
+    width: 100%;
+    height: 40px;
+    margin-top: -20px;
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    left: 0;
+}
+.header-main .logo,.header-main .header-link {
+    float: left;
+}
+.header-main .logo {
+    width: 142px;
+    height: 32px;
+    margin: 4px 0;
+    margin-left: 20px;
+    background-image: url("../images/logo.png");
+}
+.header-main .header-link {
+    width: auto;
+    height: 100%;
+    padding-left: 34px;
+    position: relative;
+}
+.header-main .header-link .link-item {
+    display: inline-block;
+    color: #fff;
+    font-size: 16px;
+    height: 42px;
+    line-height: 38px;
+    margin: 0 25px;
+    vertical-align: middle;
+    position: relative;
+}
+.header-main .header-link .link-cur a {
+    color: #3b8cff;
+}
+.header-main .header-link .link-cur .subscript {
+    background: #3b8cff;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 5px;
+}
+.header-main .header-info,.header-main .header-super {
+    float: right;
+    height: 100%;
+}
+.header-main .header-super .super-hot {
+    color: #f8645c;
+    line-height: 40px;
+    margin-right: 10px;
+    text-decoration: underline;
+}
+.header-main .header-info {
+    margin-right: 10px;
+    position: relative;
+}
+.header-main .header-info .user-info {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    margin-right: 15px;
+}
+.header-main .header-info .user-info .user-photo-box {
+    display: inline-block;
+    vertical-align: middle;
+    width: 34px;
+    height: 34px;
+    background: rgba(0,0,0,.1);
+    /*background-position: center center;*/
+    border-radius: 50%;
+}
+.header-main .header-info .user-info .user-photo {
+    display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+    background-image: url("../images/ico1.jpg");
+    background-size: cover;
+    /*background-position: center center;*/
+    border-radius: 50%;
+}
+.header-main .header-info .user-name {
+    margin-left: 10px;
+}
+.header-main .header-info .user-crown {
+    vertical-align: middle;
+    width: 20px;
+    height: 18px;
+    margin: 0 5px;
+    display: inline-block;
+    margin-top: -6px;
+    background-image: url("../images/user-crown.png");
+}
+.header-main .header-info .seperate {
+    display: inline-block;
+    width: 0;
+    height: 12px;
+    margin-bottom: -1px;
+    border-left: 1px solid #adb3be;
+}
+.header-main .header-info .download {
+    height: 12px;
+    line-height: 12px;
+    margin-left: 15px;
+}
+.header-main .header-info .center {
+    color: #fff;
+    background: #f8645c;
+    border-radius: 20px;
+    padding: 5px 15px;
+    line-height: 40px;
+    margin-left: 20px;
+    display: inline;
+}
+.header-main .header-info .icon {
+    width: 20px;
+    height: 18px;
+    margin-left: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url("../images/ico.gif");
+}
+.header-main .header-info .inform {
+    background-position: 0 0px;
+}
+.header-main .header-info .opinion {
+    background-position: 0 40px;
+}
+.header-main .header-info .skin {
+    background-position: 0 80px;
+}
+
+/* ==========侧边导航========== */
+
+#aside {
+    top: 62px;
+    left: 0px;
+    bottom: 0px;
+    z-index: 9;
+    position: absolute;
+    background-color: #EFF4F8;
+    width: 194px;
+    height: 100%;
+}
+.module-aside {
+    padding-top: 10px;
+    height: 100%;
+}
+.module-aside a {
+    height: 38px;
+    line-height: 38px;
+    padding: 0 0 0 15px;
+    display: block;
+    font-size: 14px;
+}
+.module-aside .active a {
+    color: #3b8cff;
+    background: rgba(0,0,0,.05);
+}
+.module-aside a .text {
+    position: relative;
+    display: block;
+    height: 45px;
+    width: 115px;
+    padding-left: 38px;
+    cursor: pointer;
+}
+
+/* ==========主要内容========== */
+#main {
+    top: 62px;
+    left: 194px;
+    bottom: 0px;
+    right: 10px;
+    z-index: 1;
+    background: #fff;
+    margin-left: -1px;
+    border-top: 1px solid #d8dfea;
+    border-left: 1px solid #d8dfea;
+    border-right: 1px solid #d8dfea;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    position: absolute;
+}
+.function {
+    position: relative;
+    padding: 4px 0 3px;
+}
+.function .view-icon,.function .sort {
+    margin: 12px 18px 10px 0;
+    float: right;
+    position: relative;
+}
+.function .sort {
+    margin: 12px 5px 10px 0;
+}
+.function .view-icon .switch,.function .sort .sort-btn {
+    width: 30px;
+    height: 30px;
+    display: block;
+    background-image: url("../images/ico2.gif");
+}
+.function .view-icon .list-switch {
+    background-position: 0 60px;
+}
+.function .view-icon .grid-switch {
+    background-position: 0 0;
+}
+.function .sort .sort-btn-icon {
+    background-position: 0 30px;
+}
+.function .sort .sort-list {
+    position: absolute;
+    top:36px;
+    left: -70px;
+    width: 100px;
+    height:auto;
+    border: 1px solid #c0d9fe;
+    border-radius: 5px;
+    background: white;
+    z-index: 2;
+    display: none;
+}
+.function .sort .sort-list .sort-item {
+    display: block;
+    line-height: 30px;
+    padding-left: 20px;
+    color: #3b8cff;
+}
+.function .tools {
+    height: 33px;
+    padding: 11px 10px;
+    margin-right: 400px;
+    position: relative;
+}
+.function .tools .tools-btn {
+    text-decoration: none;
+    color: #3b8cff;
+    border: 1px solid #c0d9fe;
+    border-radius: 4px;
+    height: 32px;
+    line-height: 32px;
+    padding:0 10px;
+    margin: 0 5px;
+    display: inline-block;
+    cursor: pointer;
+}
+.function .tools .disabled{
+    position: absolute;
+    display: block;
+    opacity: 0.5;
+    background: white;
+}
+.function .tools .tools-btn .icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    display: inline-block;
+    background: url("../images/ico3.gif") no-repeat 0 0px;
+}
+
+.history-list {
+    padding-left: 16px;
+    height: 16px;
+    line-height: 16px;
+    margin-bottom: 5px;
+    position: relative;
+}
+.history-list .history-load {
+    float: right;
+    margin-right: 20px;
+}
+.history-list .history-manager {
+    position: absolute;
+    top: 0;
+    left: 16px;
+    display: none;
+}
+.history-list .history-manager li {
+    float: left;
+}
+.history-list .history-manager-separator {
+    color: #c5d8f3;
+    padding: 0 3px;
+}
+.history-list .history-manager-separator-arrow {
+    color: #c5d8f3;
+    padding: 0 5px;
+}
+.history-list a {
+    color: #4287ed;
+}
+.view-header {
+    position: relative;
+    height: 36px;
+    overflow: hidden;
+    border-bottom: 1px solid #f2f6fd;
+}
+.view-header .com-col {
+    /*top: 0;*/
+    border-top-color: #fff;
+    height: 36px;
+    line-height: 36px;
+    color: #888;
+    overflow: hidden;
+    padding: 0;
+    /*position: absolute;*/
+}
+.view-header .col {
+    float: left;
+    height: 100%;
+    text-indent: 10px;
+    overflow: hidden;
+}
+#main .filename {
+    width: 60%;
+    float: left;
+    text-indent: 0;
+}
+#main .size {
+    width: 16%;
+    float: left;
+}
+#main .date {
+    width: 24%;
+    float: left;
+}
+.view-header .arrows-up,.view-header .arrows-down {
+    width: 8px;
+    height: 10px;
+    display: inline-block;
+    margin-left: 3px;
+    background-image: url("../images/arrows.png");
+}
+.view-header .arrows-up {
+    background-position: 0 0;
+}
+.view-header .arrows-down {
+    background-position: 0 10px;
+}
+#main .check,#main .check-over {
+    width: 14px;
+    height: 14px;
+    margin: -3px 12px 0 16px;
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url("../images/check.png");
+}
+#main .check {
+    background-position: 0 0;
+}
+#main .check-over {
+    background-position: -40px 0;
+}
+.view-header .check-text {
+    display: inline-block;
+    line-height: 36px;
+}
+.view-header .list-cols {
+    display: none;
+}
+.view-header .grid-cols {
+    display: block;
+}
+
+/*视图*/
+.view-main {
+    position: relative;
+    height: 100%;
+}
+/*图标视图*/
+.view-main .grid-view{
+    display: block;
+}
+.grid-view .grid-view-item {
+    width: 120px;
+    height: 127px;
+    float: left;
+    margin: 4px 0 0 6px;
+    text-align: center;
+    border: 1px solid #fff;
+    position: relative;
+}
+.grid-view .grid-view-item .file-icon {
+    position: relative;
+    margin: 9px auto 0;
+    width: 84px;
+    height: 84px;
+    overflow: hidden;
+    background: url("../images/file.png") no-repeat center center;
+}
+.grid-view .grid-view-item .file-name {
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin: 6px 5px 5px;
+}
+.back-color-over {
+    background-color: #eff4f8;
+}
+.back-color-lick {
+    border: 1px solid #90c3fd !important;
+    border-radius: 5px;
+    background-color: #eff4f8;
+}
+.grid-view .grid-view-item .checkbox-over,.grid-view .grid-view-item .checkbox-lick {
+    position: absolute;
+    top: 6px;
+    left: 8px;
+    width: 19px;
+    height: 19px;
+    display: block;
+    background-image: url("../images/checkbox-over.gif");
+}
+.grid-view .grid-view-item .checkbox-over {
+    background-position: 0 0;
+}
+.grid-view .grid-view-item .checkbox-lick {
+    background-position: 0 19px;
+}
+
+/*列表视图*/
+.view-main .list-view {
+    height: auto;
+    display: none;
+}
+.list-view .list-view-item {
+    height: 44px;
+    line-height: 44px;
+    border-bottom: 1px solid #f2f6fd;
+    position: relative;
+}
+.list-view .list-view-item .fileicon {
+    width: 26px;
+    height: 21px;
+    position: absolute;
+    top: 11px;
+    left: 43px;
+    background: url("../images/file-name.gif") no-repeat;
+}
+.list-view .list-view-item a {
+    margin-left: 38px;
+}
+
+/*重命名弹框*/
+.rename {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 84px;
+    width: 100%;
+}
+.rename .new-name {
+    background: #F0F8FD;
+}
+.rename .new-name .box {
+    margin: 9px 0;
+    padding: 0 0 0 5px;
+    width: 200px;
+    height: 24px;
+    vertical-align: middle;
+    border: 1px solid #3b8cff;
+    border: 1px solid rgba(58,140,255,.3);
+    background: #fff;
+    border-radius: 2px;
+}
+.rename .new-name .sure,.rename .new-name .cancel {
+    width: 24px;
+    height: 23px;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    position: relative;
+    background-image: url("../images/sure-cancel.png");
+}
+.rename .new-name .sure {
+    margin: 8px 2px 8px 5px;
+    background-position:  0 0;
+}
+.rename .new-name .cancel {
+    margin: 8px 0;
+    background-position:  0 23px;
+}
+.rename-grid {
+    border-bottom: 0;
+    left: 0;
+    padding-left: 1px;
+    width: 139px;
+    top: 0;
+    padding-top: 96px;
+    padding-bottom: 2px;
+}
+.rename-grid .new-name {
+    background: #F1F5FA;
+    margin-top: 7px;
+    border-radius: 4px;
+}
+.rename-grid .new-name .box {
+    width: 74px;
+    margin: 0;
+}
+.rename-grid .new-name .sure {
+    margin: 0;
+}
+.rename-grid .new-name .cancel {
+    margin: 0 0 0 2px;
+}
+
+/*操作提示*/
+#tip-inner {
+    max-height: 37px;
+    overflow: hidden;
+    background-color: #faf0cd;
+    border: 1px solid #f3e041;
+    border-radius: 4px;
+    color: #666;
+    box-shadow: 0 0 0 rgba(0,0,0,.2);
+    position: fixed;
+    top:73px;
+    left: 50%;
+    padding: 0 10px;
+    z-index: 999;
+    display: none;
+}
+#tip-inner .tip-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-top: 8px;
+    margin-right: 5px;
+    background-image: url("../images/tip-inner.png");
+}
+#tip-inner .tip-icon-success{
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+#tip-inner .tip-text{
+    float: left;
+    line-height: 37px;
+    max-width: 450px;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+}
+
+/*搜索框*/
+.search {
+    float: right;
+    width: 21%;
+    min-width: 165px;
+    max-width: 315px;
+    height: 30px;
+    margin: 12px 8px 12px 0;
+    position: relative;
+}
+.search .form-box {
+    padding-left: 15px;
+    padding-right: 54px;
+    background: #f1f2f4;
+    border-radius: 33px;
+}
+.search .form-box .search-query {
+    width: 100%;
+    height: 30px;
+    background: 0 0;
+    border: 0;
+    outline: 0;
+    line-height: 29px!important;
+    position: relative;
+    font-size: 12px;
+}
+.search .form-box .search-button,.search .form-box .search-clear {
+    display: block;
+    width: 15px;
+    height: 15px;
+    border: 0;
+    background-image: url("../images/search.png");
+}
+.search .form-box .search-button {
+    position: absolute;
+    top: 9px;
+    cursor: pointer;
+    right: 13px;
+    background-position: 0 0;
+}
+.search .form-box .search-clear {
+    position: absolute;
+    right: 32px;
+    top: 9px;
+    cursor: pointer;
+    background-position: 1px 15px;
+    display: none;
+}
+.search .form-box .input-placeholder {
+    position: absolute;
+    top: 6px;
+    left: 15px;
+    color: #929292;
+}
+
+/*右键菜单*/
+.right-click {
+    position: absolute;
+    font-size: 13px!important;
+    color: #000!important;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+.right-click .list {
+    display: none;
+    border: 1px solid #dde0e4;
+    border-radius: 5px;
+    box-shadow: 0 0 8px #ccc;
+    min-height: 23px;
+    padding: 2px 0;
+    position: absolute;
+    background-color: #FFF;
+}
+.right-click .list .item {
+    display: list-item;
+    cursor: default;
+    height: 23px;
+    line-height: 23px;
+    white-space: nowrap;
+    position: relative;
+    z-index: 1;
+    padding: 0 27px 0 20px;
+}
+.right-click .list .separate {
+    padding: 0;
+    margin: 5px 0;
+    height: 1px;
+    line-height: 0;
+    font-size: 0!important;
+    background-color: #e9e9e9;
+    cursor: default;
+}
+.right-click .list .item:hover {
+    height: 23px;
+    line-height: 23px;
+    background: #3b8cff;
+    color: white;
+}

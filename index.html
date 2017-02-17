@@ -1,182 +1,278 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
-    <style type="text/css">
-        #scroll{
-            width: 20px;
-            height: 600px;
-            background: blue;
-            position: relative;
-            top: 0;
-            left: 0;
-            display: none;
-        }
-        #scroll span{
-            width: 50px;
-            background: red;
-            position: absolute;
-
-        }
-        #box{
-            width: 500px;
-            height: 500px;
-            border: 1px solid black;
-            position: absolute;
-            left: 68px;
-            top: 8px;
-            overflow: hidden;
-        }
-        #content{
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
-    </style>
+    <title>百度云</title>
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/main.css">
 </head>
 <body>
-
-<div id="scroll">
-    <span id="span"></span>
-</div>
-<div id="box">
-    <div id="content">
-        北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,,
-        北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,
-        北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,
-        您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,
-        北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,
-        北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,
-        您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,
-        北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,
-        北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,
-        您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,
-        北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,北京欢迎您,
-
-
+<div id="layout">
+    <div id="header">
+        <dl class="header-main">
+            <dt class="logo"></dt>
+            <dd class="header-link">
+            <span class="link-item link-cur">
+                <a href="javascript:;">网盘</a>
+                <span class="subscript"></span>
+            </span>
+                <span class="link-item">
+                <a href="javascript:;">分享</a>
+                <span class="subscript"></span>
+            </span>
+                <span class="link-item">
+                <a href="javascript:;">更多</a>
+                <span class="subscript"></span>
+            </span>
+            </dd>
+            <dd class="header-info">
+            <span class="user-info">
+                <span class="user-photo-box">
+                    <i class="user-photo"></i>
+                </span>
+                <span class="user-name">秦时明月時丶</span>
+                <a href="javascript:;" class="user-crown"></a>
+                <i class="arrow"></i>
+            </span>
+                <i class="seperate"></i>
+                <a href="javascript:;" class="download">客户端下载</a>
+                <a href="javascript:;" class="icon inform"></a>
+                <a href="javascript:;" class="icon opinion"></a>
+                <a href="javascript:;" class="icon skin"></a>
+                <a href="javascript:;" class="center">会员中心</a>
+            </dd>
+            <dd class="header-super">
+                <a href="javascript:;" class="super-hot">超级会员 限时优惠</a>
+            </dd>
+        </dl>
+    </div>
+    <div id="aside">
+        <div class="module-aside">
+            <ul class="menu-list">
+                <li class="list-item active">
+                    <a href="javascript:;" class="">
+                    <span class="text">
+                        <span class="icon all"></span>
+                        <span>全部文件</span>
+                    </span>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="javascript:;" class="">
+                    <span class="text">
+                        <span>图片</span>
+                    </span>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="javascript:;" class="">
+                    <span class="text">
+                        <span>文档</span>
+                    </span>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="javascript:;" class="">
+                    <span class="text">
+                        <span>视频</span>
+                    </span>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="javascript:;" class="">
+                    <span class="text">
+                        <span>种子</span>
+                    </span>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="javascript:;" class="">
+                    <span class="text">
+                        <span>音乐</span>
+                    </span>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="javascript:;" class="">
+                    <span class="text">
+                        <span>其他</span>
+                    </span>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="javascript:;" class="">
+                    <span class="text">
+                        <span class="icon share"></span>
+                        <span>我的分享</span>
+                    </span>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="javascript:;" class="">
+                    <span class="text">
+                        <span class="icon recycle"></span>
+                        <span>回收站</span>
+                    </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="main">
+        <div class="function">
+            <div class="view-icon">
+                <a href="javascript:;" class="switch grid-switch"></a>
+            </div>
+            <div class="sort">
+                <span class="sort-btn sort-btn-icon"></span>
+                <div class="sort-list">
+                    <span class="sort-item">文件名</span>
+                    <span class="sort-item">大小</span>
+                    <span class="sort-item">修改日期</span>
+                </div>
+            </div>
+            <div class="search">
+                <div class="form-box">
+                    <form action="">
+                        <input type="text" class="search-query">
+                        <span class="search-clear"></span>
+                        <span class="search-button"></span>
+                        <span class="input-placeholder">搜索你的文件</span>
+                    </form>
+                </div>
+            </div>
+            <div class="tools">
+                <a href="javascript:;" class="tools-btn">
+                    <em class="icon"></em>
+                    <span class="text">新建文件夹</span>
+                </a>
+                <span class="disabled"></span>
+                <a href="javascript:;" class="tools-btn">
+                    <em class="icon"></em>
+                    <span class="text">重命名</span>
+                </a>
+                <a href="javascript:;" class="tools-btn">
+                    <em class="icon"></em>
+                    <span class="text">删除</span>
+                </a>
+            </div>
+        </div>
+        <div class="history-list">
+            <span class="fileAll">全部文件</span>
+            <span class="history-load">已全部加载，共<span class="load-num">10</span>个</span>
+            <ul class="history-manager">
+                <li>
+                    <a href="javascript:;" id="back">返回上一级</a><span class="history-manager-separator">|</span><a href="javascript:;" id="all">全部文件</a><span class="history-manager-separator-arrow">></span>
+                </li>
+                <li>
+                </li>
+            </ul>
+        </div>
+        <div class="view-header">
+            <ul class="com-col list-cols">
+                <li class="col filename">
+                    <span class="check"></span>
+                    <span class="check-text">文件名</span>
+                    <span class=""></span>
+                </li>
+                <li class="col size">
+                    <span class="text">大小</span>
+                    <span class=""></span>
+                </li>
+                <li class="col date">
+                    <span class="text">修改日期</span>
+                    <span class="arrows-down"></span>
+                </li>
+            </ul>
+            <ul class="com-col grid-cols">
+                <li class="col">
+                        <span class="check" id="checkAll"></span>
+                        <span class="check-text">全选</span>
+                </li>
+            </ul>
+        </div>
+        <div class="view-main">
+            <div class="grid-view clearfix">
+<!--                <div class="grid-view-item">
+                    <div class="file-icon"></div>
+                    <div class="file-name">电脑备份</div>
+                    <span class=""></span>
+                </div>
+                <div class="grid-view-item back-color-over">
+                    <div class="file-icon"></div>
+                    <div class="file-name">电脑备份</div>
+                    <span class="checkbox-over"></span>
+                </div>
+                <div class="grid-view-item back-color-lick">
+                    <div class="file-icon"></div>
+                    <div class="file-name">电脑备份</div>
+                    <span class="checkbox-lick"></span>
+                </div>-->
+            </div>
+            <div class="list-view">
+                <div class="list-view-item">
+                    <div class="filename">
+                        <span class="check"></span>
+                        <div class="fileicon"></div>
+                        <a href="javascript:">电脑备份</a>
+                    </div>
+                    <div class="size">-</div>
+                    <div class="date">2016-10-08 13:50</div>
+                </div>
+                <div class="list-view-item">
+                    <div class="filename">
+                        <span class="check"></span>
+                        <div class="fileicon"></div>
+                        <a href="javascript:">电脑备份</a>
+                    </div>
+                    <div class="size">-</div>
+                    <div class="date">2016-10-08 13:50</div>
+                </div>
+                <div class="list-view-item">
+                    <div class="filename">
+                        <span class="check-over"></span>
+                        <div class="fileicon"></div>
+                        <a href="javascript:">电脑备份</a>
+                    </div>
+                    <div class="size">-</div>
+                    <div class="date">2016-10-08 13:50</div>
+                </div>
+            </div>
+            <div class="rename rename-grid" id="reName">
+                <div class="new-name">
+                    <input type="text" class="box">
+                    <span class="sure"></span>
+                    <span class="cancel"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="tip-inner">
+        <i class="tip-icon"></i>
+        <span class="tip-text"></span>
     </div>
 </div>
-<!--
-    需求：
-        1：滚动条（当内容超过可视区的时候出现滚动条，
-        并且内容越多滚动条越小）
-        2：鼠标滚轮之后滚动内容；
-        3：点击滚动条下移，上移动；
-        要求：绑定事件用事件绑定来做;
--->
-<script type="text/javascript">
-    var scroll = document.getElementById('scroll');
-    var span = document.getElementById('span');
-    var box = document.getElementById('box');
-    var content = document.getElementById('content');
-    //滚轮函数
-    function addmousewheel(obj,fnUp,fnDown) {
-        obj.onmousewheel = fn;
-        obj.addEventListener('DOMMouseScroll',fn);
-        function fn(ev) {
-            var onOff = null;
-            if (ev.wheelDelta){
-                //chrome
-                onOff = ev.wheelDelta>0?true:false;
-            }else {
-                //fireFox
-                onOff = ev.detail<0?true:false;
-            }
-            if (onOff){
-                if (typeof fnUp == 'function'){
-                    fnUp && fnUp();
-                }
-            }else {
-                if (typeof fnUp == 'function'){
-                    fnDown && fnDown();
-                }
-            }
-            ev.preventDefault();
-        }
-    }
-    var boxH = box.offsetHeight;
-    var contentH = content.scrollHeight;
-    if (boxH < contentH){
-        scroll.style.display = 'block';
-        var scaleBar = (boxH/contentH).toFixed(1)*1;
-        var scrollH = scroll.offsetHeight;
-        span.style.height = scrollH*scaleBar + 'px';
-    }
-    //拖拽
-    span.addEventListener('mousedown',fnDown);
-    function fnDown(ev) {
-        var disY = ev.pageY - span.offsetTop;
-        document.addEventListener('mousemove',fnMove);
-        document.addEventListener('mouseup',fnUp);
-        function fnUp() {
-            document.removeEventListener('mousemove',fnMove);
-            document.removeEventListener('mouseup',fnUp);
-        }
-        function fnMove(ev){
-            var t = ev.pageY - disY;
-            if(t < 0){
-                t = 0;
-            }else if(t > scrollH-span.offsetHeight){
-                t = scrollH-span.offsetHeight;
-            }
-            span.style.top = t + 'px';
-            var scale = t/(scrollH-span.offsetHeight);
-            content.style.top = scale * (boxH-contentH) + 'px';
-        }
-        ev.preventDefault();
-    }
-    var spanT = span.offsetTop;
-    addmousewheel(box,function () {
-        spanT-=5;
-        if(spanT < 0){
-            spanT = 0;
-        }else if(spanT > scrollH-span.offsetHeight){
-            spanT = scrollH-span.offsetHeight;
-        }
-        span.style.top = spanT + 'px';
-        var scale = spanT/(scrollH-span.offsetHeight);
-        content.style.top = scale * (boxH-contentH) + 'px';
-    },function () {
-        spanT+=5;
-        if(spanT < 0){
-            spanT = 0;
-        }else if(spanT > scrollH-span.offsetHeight){
-            spanT = scrollH-span.offsetHeight;
-        }
-        span.style.top = spanT + 'px';
-        var scale = spanT/(scrollH-span.offsetHeight);
-        content.style.top = scale * (boxH-contentH) + 'px';
-    });
-    var timer = null;
-    //点击的时候移动
-    scroll.addEventListener('mousedown',function(ev){
-        timer = setInterval(function(){
-            var y = ev.pageY;
-            var t = span.offsetTop;
-            if(y < t){
-                t-=8;
-            }else if(y > t+span.offsetHeight){
-                t+=10;
-            }else{
-                clearInterval(timer);
-            }
-            if(t < 0){
-                t = 0;
-            }else if(t > scrollH-span.offsetHeight){
-                t = scrollH-span.offsetHeight;
-            }
-            span.style.top = t + 'px';
-            var scale = t/(scrollH-span.offsetHeight);
-            content.style.top = scale * (boxH-contentH) + 'px';
-        },30);
-    });
-    scroll.addEventListener('mouseup',function(){
-        clearInterval(timer);
-    });
-
-
-
-</script>
+<div class="right-click">
+    <ul class="list" id="dom-menu">
+        <li class="item">查看</li>
+        <li class="item">排序方式</li>
+        <li class="item">刷新</li>
+        <li class="separate"></li>
+        <li class="item">重新加载页面</li>
+        <li class="item">新建文件夹</li>
+        <li class="separate"></li>
+        <li class="item">会员中心</li>
+    </ul>
+    <ul class="list" id="file-menu">
+        <li class="item">打开</li>
+        <li class="separate"></li>
+        <li class="item">重命名</li>
+        <li class="item">删除</li>
+        <li class="item">移动</li>
+    </ul>
+</div>
+<div id="boxChoose"></div>
+<div id="shadow">1</div>
+<script src="js/data.js"></script>
 </body>
 </html>
