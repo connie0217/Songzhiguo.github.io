@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>你玩过ROOM吗？</title>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    docEl.style.fontSize = 100 * (clientWidth / 320) + 'px';
+                };
+            recalc ();
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+        })(document, window);
+    </script>
+    <link rel="stylesheet" type="text/css" href="style/loading.css">
+</head>
+<body onload="loaded()">
+    <div id="wrapper">
+        <div class="swiper-container" id="scroller">
+            <div class="swiper-wrapper" id="jsBgBox">
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="itembox">
+                    <div class="animate-items">
+                        <div class="item" data-iskey="false" data-type="1" data-title="抽屉里面放着乒乓球拍" data-disc="已经开胶了，感觉有些历史了" data-img="none">床头抽屉</div>
+                        <div class="item light_a" data-iskey="false" data-type="2" data-title="" data-disc="" data-img="none">床头灯</div>
+                        <div class="item" data-iskey="false" data-type="1" data-title="枕头下面藏着一本游戏杂志" data-disc="Gamer杂志，好像在哪见过？" data-img="none">枕头</div>
+                        <div class="item" data-iskey="false" data-type="1" data-title="衣柜里有一件“10”号球衣" data-disc="有种青春的味道呢" data-img="none">衣柜</div>
+                        <div class="item light_b" data-iskey="false" data-type="2" data-title="" data-disc="" data-img="none">台灯</div>
+                        <div id="key01" class="item" data-iskey="true" data-type="3" data-title="诶，打开光驱看看？" data-disc="" data-tips="打开光驱" data-img="01">电脑</div>
+                        <div class="item" data-iskey="false" data-type="1" data-title="抽屉里面放着不少游戏杂志" data-disc="《电攻》《电软》现在都停刊了" data-img="none">书桌抽屉</div>
+                        <div class="item" data-iskey="false" data-type="1" data-title="书包里面塞了不少课本" data-disc="不过看起来都很新" data-img="none">书包</div>
+                        <div id="light" class="item" data-iskey="false" data-type="4" data-title="灯关掉了有点暗" data-disc="但好像有什么在微微发光" data-img="none">电灯开关</div>
+                        <div id="poster" class="item" data-iskey="false" data-type="1" data-title="海报背后的门上有一行字" data-disc="“每个人都有不可被辜负的天分”" data-img="none">海报</div>
+                    </div>
+                    <div class="noanimate-items">
+                        <div class="item" data-iskey="false" data-type="1" data-title="日历上3月25号被画上了一个红圈" data-disc="应该是个重要的日子吧" data-img="none">挂历</div>
+                        <div id="key03" class="item" data-iskey="true" data-type="3" data-title="原来是一个街机模样的存钱罐" data-disc="硬币投进去好像卡住了，摇一摇试试" data-tips="摇一摇试试" data-img="03">储钱罐</div>
+                        <div id="key04" class="item" data-iskey="true" data-type="3" data-title="红白机上落了一层灰尘" data-disc="卡带插上去似乎有些接触不良" data-tips="吹掉卡带接口的灰尘" data-img="04">红白机</div>
+                        <div id="video" class="item" data-iskey="false" data-type="5" data-title="收音机信号好像不太好" data-disc="播放起了天气预报" data-img="none">收音机</div>
+                        <div id="key02" class="item" data-iskey="true" data-type="3" data-title="这手机居然还有电" data-disc="有一条未读信息" data-tips="请查看短信" data-img="02">手机</div>
+                        <div id="trash" class="item" data-iskey="false" data-type="1" data-title="好像没有什么线索" data-disc="只有一些用过的卫生纸" data-img="none">垃圾桶</div>
+                        <div class="item" data-iskey="false" data-type="1" data-title="这套漫画来来回回看了多少遍了" data-disc="好像最近推出手游了？" data-img="none">龙珠</div>
+                        <div id="door" class="item" data-iskey="false" data-type="1" data-title="门好像需要密码才能打开" data-disc="房间里好像隐藏着什么东西" data-img="none">房门</div>
+                        <div class="item" data-iskey="false" data-type="1" data-title="曾梦想仗剑走天涯 " data-disc="看一看世界的繁华" data-img="none">地图</div>
+                        <div class="item" data-iskey="false" data-type="1" data-title="说了那么多年要健身" data-disc="都没有坚持下来" data-img="none">哑铃</div>
+                        <div class="item" data-iskey="false" data-type="1" data-title="窗户好像生锈了" data-disc="打不开呢" data-img="none">窗</div>
+                        <div class="item" data-iskey="false" data-type="1" data-title="好久不打球了" data-disc="自从那次扭到脚后…… " data-img="none">篮球</div>
+                        <div class="item" data-iskey="false" data-type="1" data-title="一堆杂物" data-disc="各种坏掉的游戏手办" data-img="none">衣柜上杂物</div>
+                        <div class="item" data-iskey="false" data-type="1" data-title="怀念那时的紫金王朝" data-disc="可惜科比都要退役了 " data-img="none">NBA海报</div>
+                    </div>
+                    <div class="window">
+                        <div class="bg starfield iScrollLoneScrollbar" id="starfield0">
+                            <div></div>
+                        </div>
+                        <div class="bg starfield iScrollLoneScrollbar" id="starfield1">
+                            <div></div>
+                        </div>
+                        <div class="bg starfield iScrollLoneScrollbar" id="starfield2">
+                            <div></div>
+                        </div>
+                        <div class="bg starfield iScrollLoneScrollbar" id="starfield3">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <i class="icon-tips" id="jsTips" data-title="找到开关" data-disc="“说不定能有意外的发现”"></i>
+        <div class="dialog" id="dialogBox">
+            <div class="dialog-tips">
+                <h3>日历上3月25号被画上了一个红圈</h3>
+                <p>应该是个重要的日子吧</p>
+            </div>
+            <div class="dialog-key">
+                <div class="key-img key-img_undefined"><span style=""></span></div>
+                <span class="key-tips"></span>
+            </div>
+            <div class="dialog-progress">已获得线索：<span>0</span>／4</div>
+            <div class="dialog-mask"></div>
+        </div>
+        <div class="lock-key">
+            <div class="lock-key_hd">
+                <p>输入密码</p>
+                <div class="keystatus">
+                    <span></span><span></span><span></span><span></span>
+                </div>
+            </div>
+            <div class="lock-key_bd">
+                <ul class="num-list">
+                    <li class="num-item" data-num="1">1 </li>
+                    <li class="num-item" data-num="2">2 </li>
+                    <li class="num-item" data-num="3">3 </li>
+                    <li class="num-item" data-num="4">4 </li>
+                    <li class="num-item" data-num="5">5 </li>
+                    <li class="num-item" data-num="6">6 </li>
+                    <li class="num-item" data-num="7">7 </li>
+                    <li class="num-item" data-num="8">8 </li>
+                    <li class="num-item" data-num="9">9 </li>
+                    <li class="num-item" data-num="0">0  </li>
+                </ul>
+            </div>
+            <span class="lock-key_close">取消</span>
+        </div>
+        <div class="page-finished">
+            <h3>您已经通关</h3>
+            <p>记忆的碎片被重新组合</p>
+            <p>曾经的英雄们被慢慢唤醒</p>
+        </div>
+        <div class="loading" id="loading">
+            <div class="loading-animate">
+                <div class="tips">点击把手开门</div>
+                <div class="animate-item"></div>
+                <div class="text">
+                    <p>如果打开这扇门</p>
+                    <p>就是你当年的那个房间...</p>
+                </div>
+                <div class="text-percent" id="percent"></div>
+            </div>
+        </div>
+        <div class="page-kv" id="pageKV">
+            <div class="page-kv_slogan"></div>
+            <div class="page-kv_logo"></div>
+            <div class="page-kv_text">分享·致曾经的游戏时光</div>
+            <span class="page-kv_link" id="link">了解更多</span>
+        </div>
+        <div class="page-tips"></div>
+    </div>
+    <audio id="audioBg" src="images/mp3/bg.mp3" loop="true"></audio>
+    <audio id="audioLight" src="images/mp3/light.mp3"></audio>
+    <audio id="audioPoster" src="images/mp3/poster.mp3"></audio>
+    <audio id="audioTrash" src="images/mp3/trash.mp3"></audio>
+    <audio id="audioVideo" src="images/mp3/video.mp3"></audio>
+    <audio id="audioResult" src="images/mp3/result.mp3"></audio>
+    <script src="js/zepto.min.js"></script>
+    <script src="js/touch.js"></script>
+    <script src="js/iscroll.js"></script>
+    <script src="js/shake.js"></script>
+    <script src="js/loadding.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+        var myScroll;
+        function loaded () {
+            myScroll = new IScroll('#wrapper', {
+                scrollX: true,
+                scrollY: false,
+                mouseWheel: true,
+                indicators: [{
+                    el: document.getElementById('starfield3'),
+                    resize: false,
+                    ignoreBoundaries: true,
+                    speedRatioX: 0.1
+                }, {
+                    el: document.getElementById('starfield2'),
+                    resize: false,
+                    ignoreBoundaries: true,
+                    speedRatioX: 0.08
+                }, {
+                    el: document.getElementById('starfield1'),
+                    resize: false,
+                    ignoreBoundaries: true,
+                    speedRatioX: 0.04
+                }, {
+                    el: document.getElementById('starfield0'),
+                    resize: false,
+                    ignoreBoundaries: true,
+                    speedRatioX: 0
+                }]
+            });
+            myScroll.scrollTo(-1200,0);
+        }
+        document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+    </script>
+</body>
+</html>

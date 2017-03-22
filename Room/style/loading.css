@@ -1,0 +1,156 @@
+@-webkit-keyframes loading-ani {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        background-color: #000
+    }
+    50% {
+        opacity: 1;
+        background-color: #fff
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(2);
+        transform: scale(2);
+        background-color: #fff
+    }
+}
+
+@keyframes loading-ani {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        background-color: #000
+    }
+    50% {
+        opacity: 1;
+        background-color: #fff
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(2);
+        transform: scale(2);
+        background-color: #fff
+    }
+}
+.loading {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #000;
+    color: #fff;
+}
+.loading.complete {
+    -webkit-animation: loading-ani 1s both;
+    animation: loading-ani 1s both
+}
+.loading .tips {
+    position: absolute;
+    top: .3rem;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: .14rem;
+    display: none;
+}
+.loading .tips.show {
+    display: block;
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both
+}
+.loading-animate .animate-item {
+    position: absolute;
+    left: .1rem;
+    width: 2.155rem;
+    height: 3.51rem;
+    -webkit-transform: scale(.2);
+    transform: scale(.2);
+    -webkit-transform-origin: 1.5rem 1.75rem;
+    transform-origin: 1.5rem 1.75rem;
+    background: url("../images/img/loading/loading01_s.png") no-repeat;
+    -webkit-background-size: 100% 100%;
+    -webkit-animation: run2 350ms steps(5) infinite 0s;
+    animation: run2 350ms steps(5) infinite 0s;
+}
+.loading-animate .animate-item.loaded {
+    background: url("../images/img/loading/loading01.png") no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100%;
+    -webkit-animation: run 350ms steps(5) infinite 0s;
+    animation: run 350ms steps(5) infinite 0s;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: -webkit-transform 1s linear;
+    transition: transform 1s linear;
+}
+.loading .text {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    margin-top: .9rem;
+    font-size: .14rem;
+}
+.loading .text p {
+    display: none;
+    margin: 0;
+    line-height: .2rem;
+}
+.loading .text.show p:nth-child(1) {
+    display: block;
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+}
+.loading .text.show p:nth-child(2) {
+    display: block;
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-delay: 1.5s;
+    animation-delay: 1.5s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+}
+.loading .text-percent {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: .7rem;
+    width: 100%;
+    text-align: center;
+    font-size: .14rem;
+    line-height: .18rem
+}
+@-webkit-keyframes run {
+    100% {
+        background-image: url(../images/img/loading/loading02.png)
+    }
+}
+
+@-webkit-keyframes run2 {
+    100% {
+        background-image: url(../images/img/loading/loading02_s.png)
+    }
+}
