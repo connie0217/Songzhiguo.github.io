@@ -1,5 +1,13 @@
 /* loading */
-"use strict";
+/*
+    1.加载（面向对象）
+      循环所有资源，根据资源类型，加载创建资源，加载文件之后开始播放背景音乐
+        loading百分比就是加载资源占总资源的百分比
+        资源全部加载完时，百分比为100%，隐藏百分比
+        门开始从小变大，文字依次间隔时间透明度由0到1显示
+    2.点击门把手
+      背景颜色由黑变白，放大2倍
+ */
 $(function() {
     var PreLoad = function(resource, object) {
         var obj = object || {};//有object就把object赋给obj,没有创建个对象赋给obj
@@ -34,7 +42,7 @@ $(function() {
     };
     PreLoad.prototype.image = function(path) {
         var img = document.createElement("img");//创建img
-        this.load(img, path);//调用PreLoad下的方法，传入实参img,path
+        this.load(img, path);//调用PreLoad下的load方法，传入实参img,path
         img.src = path;
     };
     PreLoad.prototype.stylesheet = function(path) {

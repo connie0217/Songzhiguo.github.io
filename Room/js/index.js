@@ -1,4 +1,51 @@
-"use strict";
+/*
+1.点击提示弹窗层，弹窗层消失
+2.点击房间内的物品
+    开灯状态
+      物品门：
+        拿到线索
+          弹出会话框
+            点击会话框，会话框消失,进入输入密码界面
+              输入密码
+                (1).输入四个
+                    密码错误
+                      抖动效果
+                      输入超过四个，第五个为第一个
+                    密码正确
+                      进入完成页面
+                        文字依次间隔时间透明度由0到1，然后消失，显示最后一个页面
+                (2).取消
+                    输入密码页面隐藏
+        未拿到线索
+            弹出会话框
+              点击会话框，会话框消失
+              
+      物品：台灯、床头灯、房间灯
+        切换灯的状态
+        
+      物品：收音机、抽屉、枕头、衣柜..
+        弹出会话框
+          点击会话框，会话框消失
+          
+      物品：电脑、手机、存钱罐
+        未拿到线索
+          弹出会话框
+            点击线索
+              点击查看
+                拿到线索
+                  点击会话框，会话框消失
+        拿到线索
+          弹出会话框
+            点击会话框，会话框消失
+      
+    关灯状态
+      弹出会话框
+        点击会话框，会话框消失
+        
+  3.点击右上角提示
+      弹出会话框
+        点击会话框，会话框消失
+ */
 $(function() {
     var $bgbox = $("#jsBgBox");//背景盒子
     var dialogFlag = true;//会话框开关,点击时为true才能消失
@@ -9,7 +56,7 @@ $(function() {
     var $dialogTitle = $dialogTips.find("h3");//data-title
     var $dialogDisc = $dialogTips.find("p");//data-disc
     var lightIsOpened = "true";//true为开灯
-    var isFinished = false;//完成线索
+    var isFinished = false;//完成线索false未完成
     var isFromDoor = false;//输入密码开关
     var addShakeEvent = function() {
         var ShakeEvent = new Shake({
