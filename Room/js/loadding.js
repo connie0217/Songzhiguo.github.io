@@ -95,7 +95,7 @@ $(function() {
                             $load.find(".tips").addClass("show");//class属性添加show,tips显示
                             //添加点击事件
                             $load.find(".animate-item").on("tap", function() {
-                                $($load).addClass("compvare");//添加compvare，背景颜色由黑变白，放大2倍
+                                $($load).addClass("complete");//添加complete，背景颜色由黑变白，放大2倍
                                 setTimeout(function() {
                                     $load.remove();//删除$load节点
                                 }, 1e3);
