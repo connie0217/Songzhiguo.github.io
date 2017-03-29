@@ -1,0 +1,407 @@
+body{
+    height:18811px;
+}
+p {
+    margin:0;
+    padding:0;
+    width:315px;
+    color:#fff;
+    font-size:13px;
+    line-height:17px;
+    -webkit-hyphens:auto;
+    -moz-hyphens:auto;
+    -ms-hyphens:auto;
+    hyphens:auto;
+    word-wrap:break-word;
+}
+h2 {
+    font-weight:400;
+    font-family:'微软雅黑';
+    font-size:40px;
+    line-height:43px;
+    width:315px;
+    margin:0 0 7px;
+    letter-spacing:3px;
+    color:#f6f6f6;
+    text-transform:uppercase;
+    -webkit-margin-before: 0.83em;
+    -webkit-margin-after: 0.83em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+.header{
+    z-index: 1000;
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 45px;
+    background: #f6f6f6;
+}
+.header .header-content{
+    width: 100%;
+    height: 25px;
+    position: absolute;
+    top:10px;
+}
+.header .header-content .header-logo {
+    width:48px;
+    height:36px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin:-18px 0 0 -24px;
+    background:url('../img/phone/4N-logo-black.svg') center center no-repeat;
+}
+.btn-fb-black,.btn-tw-black,.btn-pi-black,.btn-in-black,.btn-yt-black,.btn-fb-white,.btn-tw-white,.btn-fb-orange,.btn-tw-orange {
+    width:20px;
+    height:20px;
+    cursor:pointer;
+}
+.btn-fb-black {
+    background:url(../img/phone/fb-k.svg) no-repeat center center
+}
+.btn-tw-black {
+    background:url(../img/phone/tw-k.svg) no-repeat center center
+}
+.btn-pi-black {
+    background:url(../img/phone/pint-k.svg) no-repeat center center
+}
+.btn-in-black {
+    background:url(../img/phone/inst-k.svg) no-repeat center center
+}
+.btn-yt-black {
+    background:url(../img/phone/yt-k.svg) no-repeat center center
+}
+.header .header-content .header-social-container {
+    height:100%;
+    float:right;
+    padding:2px 55px 0 0;
+
+}
+.header .header-content .header-social-container div {
+    float:left;
+    margin-left:12px;
+}
+/*----------------------------------------滚动部分------------------------------------*/
+#skrollr-body{
+    height:100%;
+}
+#s_04_01 {
+    background:#fbb034;
+    /*-----------------*/
+    //overflow-x: hidden;
+}
+/*主体黄色部分*/
+/*-----------s_04_01---------*/
+.g100 {
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0
+}
+#s_04_01 .content-text {
+    position: absolute;
+    top: 50%;
+    margin-top: -95px;
+    z-index: 2;
+}
+.skrollable {
+    position:fixed;
+    z-index:100;
+}
+/*---.content---*/
+.content{
+    width: 1280px;
+    height: 562px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -281px 0 0 -640px;
+}
+.content-text {
+    margin-left:165px;
+}
+#s_04_01_2{
+    background:url(../img/esprit/4N-esprit-p1.png),url(../img/esprit/4N-esprit-p2.jpg);
+    background-repeat:no-repeat;
+    background-position:center left,center right;
+    z-index:1;
+    width:2129px;
+    margin-left:30%
+}
+#s_04_01_2  .skrollable{
+    position: absolute;
+}
+/*-----------s_04_02---------*/
+#s_04_02 {
+    background:#252525;
+    left:120%;
+}
+#s_04_02 .content-text {
+    position:absolute;
+    top:50%;
+    margin-top:-5px;
+    z-index:2
+}
+/*---手表------*/
+#s_04_02 #s_04_02_img1_cont {
+    z-index:0
+}
+#s_04_02_rotzoom1{
+    background: url('../img/ergo/rotzoom/montre-zoom_1.png');
+}
+#s_04_02 .s_04_02_img {
+    width:596px;
+    height:545px;
+    position:absolute;
+    top:50%;
+    left:35%;
+    margin-top:-280.5px
+}
+/*---手表旁边文字*/
+#s_04_02 #s_04_02_img2 {
+    background:url(../img/ergo/4N-ergo-cadran.png) no-repeat scroll 94% 35%;
+    z-index:0
+}
+#s_04_02 .rule {
+    width:3px;
+    height:68px;
+    background:url(../img/ergo/4N-ergo-fleche.png) no-repeat center center
+}
+#s_04_02 #s_04_02_rule-1 {
+    position:absolute;
+    top:174px;
+    right:272px
+}
+#s_04_02 #s_04_02_rule-text {
+    font-weight:400;
+    font-family:tlight,'arial narrow',sans-serif;
+    font-size:34px;
+    color:#f6f6f6;
+    position:absolute;
+    top:274px;
+    right:172px;
+}
+#s_04_02 #s_04_02_img3 {
+    width:2000px;
+    height:600px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin:-300px 0 0 -1000px;
+    background:url(../img/ergo/4N-main.png) no-repeat scroll 762px 125px;
+    z-index:0
+}
+#s_04_02_2 {
+    background:#000 url(../img/ergo/4N-ergo-massive.jpg) no-repeat center center;
+    z-index:1;
+    width:2636px;
+    position: absolute;
+    left:0px;
+}
+/*-------阴影层-------*/
+.transi-black-over {
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    display:block;
+    background-color:#000;
+    z-index:997;
+    position:fixed;
+    opacity:.5;
+    pointer-events:none;
+}
+/*------------------footer-----------------------*/
+.footer {
+    -moz-user-select:none;
+    -khtml-user-select:none;
+    -webkit-user-select:none;
+    -ms-user-select:none;
+    -o-user-select:none;
+    user-select:none;
+    z-index:1000;
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:43px;
+    background:#f6f6f6
+}
+.footer .footer-content {
+    width:100%;
+    height:23px;
+    position:absolute;
+    bottom:9px
+}
+.footer .footer-content .nav {
+    text-transform:uppercase
+}
+.footer .footer-content .nav .nav-pt {
+    float:left;
+    height:25px;
+    width:55%
+}
+.footer .footer-content .nav .pt1 .btn-footer {
+    float:right
+}
+.footer .footer-content .nav a,.footer .footer-content .nav .btn-footer {
+    font-weight:900;
+    font-size:14px;
+    line-height: 25px;
+}
+.navi {
+    width:100%;
+    position:fixed;
+    bottom:-16px;
+    z-index:999;
+    background:#fff
+}
+.navi .navi-container {
+    position:fixed;
+    bottom:43px;
+    height:16px;
+    z-index:1;
+    width:166px;
+    position:absolute;
+    left:50%;
+    margin:0 0 0 -83px
+}
+.navi .navi-container .navi-section {
+    float:left;
+    margin-right:34px;
+    cursor:pointer;
+    width:16px;
+    height:16px
+}
+.navi .navi-container .navi-section:last-child {
+    margin-right:0
+}
+.navi .navi-container .navi-section div {
+    height:10px;
+    width:10px;
+    position:relative;
+    top:3px;
+    left:3px;
+    background-color:#000;
+    -webkit-border-radius:20px;
+    -moz-border-radius:20px;
+    -ms-border-radius:20px;
+    -o-border-radius:20px;
+    border-radius:20px;
+    -webkit-transform:scale(0.4);
+    -moz-transform:scale(0.4);
+    -ms-transform:scale(0.4);
+    -o-transform:scale(0.4);
+    transform:scale(0.4);
+    -webkit-transition:200ms -webkit-transform ease-in-out,200ms background-color ease-in;
+    -moz-transition:200ms -moz-transform ease-in-out,200ms background-color ease-in;
+    -ms-transition:200ms -ms-transform ease-in-out,200ms background-color ease-in;
+    -o-transition:200ms -o-transform ease-in-out,200ms background-color ease-in;
+    transition:200ms transform ease-in-out,200ms background-color ease-in
+}
+.navi .navi-container .navi-section:hover div {
+    -webkit-transform:scale(0.8);
+    -moz-transform:scale(0.8);
+    -ms-transform:scale(0.8);
+    -o-transform:scale(0.8);
+    transform:scale(0.8);
+    background-color:#fbb034
+}
+.navi .navi-container .active div {
+    -webkit-transform:scale(0.6);
+    -moz-transform:scale(0.6);
+    -ms-transform:scale(0.6);
+    -o-transform:scale(0.6);
+    transform:scale(0.6);
+    background-color:#fbb034
+}
+.navi .navi-text {
+    width:100%;
+    height:59px;
+    position:fixed;
+    bottom:-16px;
+    z-index:0;
+    background:#fff
+}
+.navi .navi-text div {
+    width:100%;
+    font-weight:400;
+    //font-family:treg,arial,sans-serif;
+    font-size:11px;
+    padding-top:7px;
+    text-align:center;
+    text-transform:uppercase;
+    opacity:0;
+    -webkit-transition:100ms opacity ease-out;
+    -moz-transition:100ms opacity ease-out;
+    -ms-transition:100ms opacity ease-out;
+    -o-transition:100ms opacity ease-out;
+    transition:100ms opacity ease-out
+}
+.navi .navi-text div ru3 {
+    font-family:tlight,arial,sans-serif
+}
+.navi.hover .navi-section div {
+    -webkit-transform:scale(0.6);
+    -moz-transform:scale(0.6);
+    -ms-transform:scale(0.6);
+    -o-transform:scale(0.6);
+    transform:scale(0.6)
+}
+.navi.hover .active div {
+    -webkit-transform:scale(0.8);
+    -moz-transform:scale(0.8);
+    -ms-transform:scale(0.8);
+    -o-transform:scale(0.8);
+    transform:scale(0.8)
+}
+.navi.hover .navi-text div {
+    opacity:1;
+    -webkit-transition:400ms opacity ease-in;
+    -moz-transition:400ms opacity ease-in;
+    -ms-transition:400ms opacity ease-in;
+    -o-transition:400ms opacity ease-in;
+    transition:400ms opacity ease-in
+}
+/*------active---------*/
+.footer .active .txt {
+    color:#fbb034
+}
+/*---------------------------transi---------------------------*/
+.transi-grey-sep {
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    background-color:#252525;
+    z-index:998;
+    position:fixed;
+    top:100%
+}
+.transi-title {
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    background-color:#f0f0f0;
+    text-align:center;
+    z-index:999;
+    position:fixed;
+    top:170%
+}
+.transi-title h1 {
+    font-size: 160px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:1050px;
+    line-height:150px;
+    margin:-150px 0 0 -525px;
+    font-weight: 400;
+}

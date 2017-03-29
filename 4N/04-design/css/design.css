@@ -1,0 +1,245 @@
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    overflow-x: hidden;
+    background-color: #000;
+}
+h2 {
+    font-weight: 400;
+    font-family: tlight,'arial narrow',sans-serif;
+    font-size: 40px;
+    line-height: 43px;
+    width: 315px;
+    margin: 0 0 7px;
+    letter-spacing: 3px;
+    color: #f6f6f6;
+    text-transform: uppercase;
+}
+p {
+    margin: 0;
+    padding: 0;
+    width: 315px;
+    color: #fff;
+    font-size: 13px;
+    line-height: 17px;
+    font-family: "Times New Roman";
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -o-hyphens: auto;
+    hyphens: auto;
+    word-wrap: break-word;
+}
+.header {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 45px;
+    background: #f6f6f6;
+}
+.header .header-content {
+    width: 100%;
+    height: 25px;
+    position: absolute;
+    top: 10px;
+}
+.header .header-content .header-logo {
+    width: 48px;
+    height: 36px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -18px 0 0 -24px;
+    background: url(../images/logo.png) no-repeat center;
+}
+
+#skrollr-body {
+    height: 100%;
+}
+#s_04_03 {
+    background: #fff;
+}
+.skrollable {
+    position: fixed;
+    z-index: 100;
+}
+.g100 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#s_04_03_1 {
+    background: #fff url(../images/4N-boite-1.jpg) no-repeat;
+    background-position: 25px 50%;
+    z-index: 0;
+}
+.content {
+    margin-top: 45px;
+    width: 1280px;
+    height: 562px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -281px 0 0 -640px;
+}
+#s_04_03 .content-text {
+    position: absolute;
+    top: 50%;
+    left: 825px;
+    margin-top: 0;
+    z-index: 2;
+}
+#s_04_03 h2, #s_04_03 p {
+    color: #000;
+}
+.skrollable .skrollable {
+    position: absolute;
+}
+.skrollable {
+    position: fixed;
+    z-index: 100;
+}
+#s_04_04 {
+    background: #252525;
+}
+#s_04_04_1 {
+    background: #fff url(../images/4N-finitions-1.jpg) no-repeat scroll 0 -350px;
+    z-index: 0;
+    width: 1871px;
+    height: 1400px;
+}
+#s_04_04 .content-text {
+    position: absolute;
+    top: 380px;
+    z-index: 2;
+}
+.content-text {
+    margin-left: 165px;
+}
+
+#caption1 {
+    top: 16%;
+    left: 18.5%;
+}
+.caption {
+    position: absolute;
+    white-space: nowrap;
+}
+.caption .right {
+    width: 400px;
+}
+.caption.right .caption-text {
+    width: 400px;
+    text-align: right;
+}
+.caption .caption-text {
+    font-weight: 400;
+    font-family: treg,arial,sans-serif;
+    font-size: 29px;
+    text-transform: uppercase;
+    text-shadow: rgba(0,0,0,.9) 1px 1px 3px;
+    color: #f6f6f6;
+}
+.caption.two-lines .caption-dot {
+    margin-top: -52px;
+}
+.caption.right .caption-dot {
+    float: right;
+    left: 100%;
+    margin-left: 2px;
+}
+.caption .caption-dot {
+    position: absolute;
+    margin-top: -15px;
+    width: 9px;
+    height: 9px;
+    background: #fbb034;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+}
+#caption2 {
+    top: 27.3%;
+    left: 63.5%;
+}
+.caption.left .caption-dot {
+    float: left;
+    margin-left: -18px;
+}
+#caption3 {
+    top: 20.7%;
+    left: 76.3%;
+}
+#caption4 {
+    top: 8%;
+    left: 79%;
+}
+#s_04_04_2 {
+    background: #000 url(../images/4N-finitions-2.jpg) no-repeat scroll -50% -350px;
+    z-index: 1;
+    width: 3000px;
+    left: 100%;
+}
+#caption5 {
+    top: 6%;
+    left: 29%;
+}
+#caption6 {
+    top: 12.8%;
+    left: 32.3%;
+}
+#caption7 {
+    top: 22.7%;
+    left: 16.3%;
+}
+#s_04_05 {
+    background: #252525;
+    background: #000;
+}
+#s_04_05 .content-text {
+    position: absolute;
+    top: 50%;
+    margin-top: -170px;
+}
+#s_04_05 .content-img {
+    width: 366px;
+    height: 531px;
+    margin: -265px 0 0 165px;
+    background: url(../images/4N-fq.jpg) no-repeat center center;
+}
+.content-img {
+    width: 660px;
+    height: 364px;
+    margin-top: -182px;
+    position: absolute;
+    top: 50%;
+    left: 495px;
+}
+
+.footer {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    z-index: 1000;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 43px;
+    background: #f6f6f6;
+}

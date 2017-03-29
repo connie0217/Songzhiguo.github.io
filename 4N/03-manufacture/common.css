@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    position:fixed;
+    top: 0;
+    left: 0;
+    z-index: 66;
+    width: 100%;
+    height: 45px;
+    background-color: #f8f8f8;
+}
+
+#logo{
+    width: 48px;
+    height: 36px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -12px 0 0 -24px;
+    background:url("img/4N-logo-black.svg") no-repeat;
+}
+#icon{
+    float: right;
+    margin-top:12px;
+    margin-right:50px;
+}
+#icon a{
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin-left: 12px;
+}
+#icon :nth-child(1){
+    background:url("img/fb-k.svg") no-repeat;
+}
+#icon :nth-child(2){
+    background:url("img/inst-k.svg") no-repeat;
+}
+#icon :nth-child(3){
+    background:url("img/pint-k.svg") no-repeat;
+}
+#icon :nth-child(4){
+    background:url("img/tw-k.svg") no-repeat;
+}
+#icon :nth-child(5){
+    background:url("img/yt-k.svg") no-repeat;
+}
+
+footer{
+    position:fixed;
+    z-index: 6;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 52px;
+    background-color: #fff;
+}
+footer #fot-top{
+    height: 20px;
+    width: 100%;
+    position:absolute;
+    top: 0;
+    left: 0;
+    font-weight: 400;
+    font-family: treg,arial,sans-serif;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color:rgba(255,255,255,0);
+    background:#fff;
+    transition: 400ms;
+}
+footer #fot-wrap{
+    width: 100%;
+    background-color:#fff;
+    position:absolute;
+    height:16px;
+}
+
+footer #fot-cen{
+    height: 13px;
+    padding-top:3px;
+    background-color:#fff;
+    position:absolute;
+    left: 50%;
+    margin-left: -80px;
+}
+
+#fot-cen a{
+    float: left;
+    margin-left: 40px;
+    width: 10px;
+    height: 10px;
+    border-radius:100%;
+    background-color:#000;
+    transform: scale(0.4);
+    transition: 200ms;
+}
+
+#fot-cen a:nth-child(1){
+    margin-left:0;
+    /*transform: scale(0.6);
+    background-color:#fbb034;*/
+}
+#fot-cen .mid{
+    transform: scale(0.6);
+    background-color: #000;
+}
+
+footer #fot-bot{
+    background-color:#f6f6f6;
+    position: absolute;
+    left:0;
+    bottom:0;
+    height:36px;
+    width: 100%;
+    text-align: center;
+    font: 10px/36px "Microsoft YaHei UI";
+    color: rgb(255, 189, 21);
+    letter-spacing: 2px;
+    word-spacing: 66px;
+
+}

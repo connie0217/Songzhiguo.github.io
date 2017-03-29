@@ -1,0 +1,149 @@
+body,p,h1,h2,h3,h4,h5,h6,dl,dd{
+	margin:0;	
+}
+body{
+	font:12px "宋体";
+	color:#333;	
+	background-color: #fff;
+}
+ul,ol{
+	margin:0;
+	padding:0;
+	list-style:none;	
+}
+h1,h2,h3,h4,h5,h6,strong,b{
+	font-weight:normal;	
+}
+a{
+	text-decoration:none;
+}
+img{
+	vertical-align:top;
+	border:none;	
+}
+i,em{
+	font-style:normal;	
+}
+table{
+	border-collapse:collapse
+}
+
+th,td{
+	padding:0;
+}
+input{
+	padding:0;
+	border:none;
+	_border:0;
+	outline: 0;
+	background: none;
+}
+fieldset{
+	padding:0;
+	margin:0;
+	border:0;
+}
+mark{
+	background:none;
+}
+.left{
+	float:left ;
+}
+.right{
+	float:right ;
+}
+.clear:after{
+	content:"";
+	display:block ;
+	clear:both;
+	height:0;
+	overflow: hidden;
+	visibility: visible;
+
+}
+.clear{
+	zoom:1;
+}
+/*------------------------------margin----------------------------*/
+.margin17{
+	margin:0 17px;
+}
+
+
+footer{
+	position:fixed;
+	z-index: 2000;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 52px;
+	background-color: #fff;
+}
+footer #fot-top{
+	height: 20px;
+	width: 100%;
+	position:absolute;
+	top: 0;
+	left: 0;
+	font-weight: 400;
+	font-family: treg,arial,sans-serif;
+	font-size: 12px;
+	line-height: 20px;
+	text-align: center;
+	text-transform: uppercase;
+	color:rgba(255,255,255,0);
+	background:#fff;
+	transition: 400ms;
+}
+footer #fot-wrap{
+	width: 100%;
+	background-color:#fff;
+	position:absolute;
+	height:16px;
+}
+
+footer #fot-cen{
+	height: 13px;
+	padding-top:3px;
+	background-color:#fff;
+	position:absolute;
+	left: 50%;
+	margin-left: -80px;
+}
+
+#fot-cen a{
+	float: left;
+	margin-left: 40px;
+	width: 10px;
+	height: 10px;
+	border-radius:100%;
+	background-color:#000;
+	transform: scale(0.4);
+	transition: 200ms;
+}
+
+#fot-cen a:nth-child(1){
+	margin-left:0;
+	/*transform: scale(0.6);
+    background-color:#fbb034;*/
+}
+#fot-cen .mid{
+	transform: scale(0.6);
+	background-color: #000;
+}
+
+footer #fot-bot{
+	background-color:#f6f6f6;
+	position: absolute;
+	left:0;
+	bottom:0;
+	height:36px;
+	width: 100%;
+	text-align: center;
+	font: 10px/36px "Microsoft YaHei UI";
+	color: rgb(255, 189, 21);
+	letter-spacing: 2px;
+	word-spacing: 66px;
+
+}
+
