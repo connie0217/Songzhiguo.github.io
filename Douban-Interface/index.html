@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+<style>
+*{
+	margin: 0;
+	padding: 0;
+}
+ul{
+	width:800px;
+	list-style: none;
+	/*clear: both;
+	overflow: hidden;*/
+}
+li{
+	width:140px;
+	height: 249px;
+	border: 1px solid #000;
+	float: left;
+	margin: 10px;
+}
+img{
+	width:140px;
+	height: 200px;
+	display: block;
+	border: none;
+}
+p{
+	height: 40px;
+}
+a{
+	display: block;
+	width:140px;
+	height: 249px;
+	text-decoration: none;
+	font:12px/40px "";
+	text-align: center;
+}
+span{
+	padding: 10px;
+	border: 1px solid #000;
+	color:#000;
+}
+.active{
+	border: 1px solid red;
+}
+
+
+</style>
+</head>
+<body>
+	<input type="text" id="tex">
+	<input type="button" value="搜索" id="btn">
+	<div id="box"></div>
+<script src="jquery-3.1.1.js" type="text/javascript" charset="utf-8"></script>
+<script src="template.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/html" id="test">
+	<h4><%=title%>:共有<%=total%>条</h4>
+	<ul>
+		<%for(var i=0;i<subjects.length;i++){%>
+			<li title="<%=subjects[i].title%>">
+				<a href="<%=subjects[i].alt%>" target="_blank">
+					<img src="<%=subjects[i].images.large%>"/>
+					<p>
+						<%=subjects[i].title.substring(0,8)%>
+						<strong>
+							<%if(subjects[i].rating.average != 0){%>
+								<%=subjects[i].rating.average%>
+							<%}%>
+						</strong>
+					</p>	
+				</a>
+			</li>
+		<%}%>
+	</ul>
+	
+	<div id="page">
+		<%for(var i=0;i<len;i++){%>
+			<%if(i == (active-1)){%>
+				<span class="active"><%=(i+1)%></span>
+			<%}else{%>
+				<span><%=(i+1)%></span>
+			<%}%>
+		<%}%>
+	</div>
+	
+</script>
+<script type="text/javascript">
+	
+	/*
+		jq
+		模板
+		数据结构
+		hash
+		JSON.parse()/JSON.stringify()
+		ajax/jsonp
+		本地存储
+	*/
+	
+	
+//	https://api.douban.com/v2/movie/search?q=金刚狼&callback=fn
+	const  $tex = $('#tex'),
+	$btn = $('#btn'),
+	$box = $('#box'),
+	$ul = $('ul');
+
+	var num = null;
+	var obj = {};
+	//点击的时候看看有没有hash值，如果没有，就设置一个hash值为1，num是从0开始的。
+	$btn.click(function(){
+		num = 0;
+		if(window.location.hash.split('=')[1] == 1){
+			createData(1);
+		}else{
+			window.location.hash = 'page=1';
+		}
+	});
+	
+	//点击按钮的时候
+	$box.click(function(ev){
+		if(ev.target.tagName === 'SPAN'){
+			//当点击span的时候，设置hash值，当hash值变化的时候，自动会走，hashchange。
+			window.location.hash = 'page='+ $(ev.target).text();
+		}
+	});
+	
+	//当hash值改变的时候触发。
+	window.onhashchange = function(){
+		//获取hash值
+		var hash = window.location.hash.split('=')[1];  //page=3
+		//计算num
+		num = (hash-1)*8;
+		createData(hash);
+	}
+	
+	function createData(hash){
+		//先从本地获取对应的数据，比如：金刚狼，变形金刚
+		var Storage = sessionStorage.getItem($tex.val());
+		//如果有这个数据，从这个数据提取出来赋值给obj，添加或者读取，没有就创建一个对象
+		obj = JSON.parse(Storage) || {};
+		//到底有没有金刚狼，有金刚狼，从这组数据下添加或者读取数据，没有就创建一个对象
+		obj[$tex.val()] = obj[$tex.val()] || {};
+		
+		//如果有这组数据（金刚狼） 并且 也有对应的数据（1:{}）,就走数据
+		if(Storage && obj[hash]){
+			var html = template('test',obj[hash]);
+			$box.html(html);
+		}else{
+			$.ajax({
+				url:'https://api.douban.com/v2/movie/search?callback=?',
+				dataType:'jsonp',
+				data:{
+					q:$tex.val(),
+					start:num,//起始位置 0:0-7,1:8-15...  
+					count:8//一次给8条数据
+				},
+				success:function(data){
+					//找到总数据能够生成多少页。
+					data.len = Math.ceil(data.total / data.count);
+					//记录当前点击的页码
+					data.active = window.location.hash.split('=')[1];
+					//金刚狼下添加一个id等于对象
+					obj[hash] = {
+						subjects:data.subjects,
+						len:data.len,
+						total:data.total,
+						title:data.title,
+						active:data.active
+					} 
+					//把存好的数据放到sessionStorage下，以便下次使用。
+					sessionStorage.setItem($tex.val(),JSON.stringify(obj));
+					var html = template('test',data);
+					$box.html(html);
+				}
+			});
+		}
+	};
+	
+	
+	
+</script>
+</body>
+</html>

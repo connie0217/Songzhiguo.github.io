@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      .pic{
+        width: 236px;
+        box-shadow:0 1px 3px rgba(0,0,0,.3);
+        overflow:hidden;
+        margin-top:10px;
+      }
+      img{
+        width:236px;
+        border: none;
+        display: block;
+      }
+      ul{
+        list-style: none;
+        margin: 0 auto;
+        width:994px;
+      }
+      li{
+        float:left;
+        margin-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+        <li>
+          <!-- <div class="pic">
+            <img src="http:\/\/www.wookmark.com\/images\/original\/638518_wookmark.jpg">
+          </div> -->
+        </li>
+        <li>
+          <!-- <div class="pic" style="height:200px">
+            <img src="http:\/\/www.wookmark.com\/images\/original\/638518_wookmark.jpg">
+          </div> -->
+        </li>
+        <li>
+          <!-- <div class="pic" style="height:300px">
+            <img src="http:\/\/www.wookmark.com\/images\/original\/638518_wookmark.jpg">
+          </div> -->
+        </li>
+        <li>
+          <!-- <div class="pic" style="height:100px">
+            <img src="http:\/\/www.wookmark.com\/images\/original\/638518_wookmark.jpg">
+          </div>
+          <div class="pic">
+            <img src="http:\/\/www.wookmark.com\/images\/original\/638518_wookmark.jpg">
+          </div> -->
+        </li>
+    </ul>
+  
+  <script src="jquery-3.1.1.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    'use strict';
+    const w = 236; //一个盒子的宽度
+    let num = 0;
+    const $list = $('li');
+    var onOff = true;
+    scroll();
+    $(window).scroll(function(){
+      let maxLi = maxIndex();
+    //  console.log(maxLi.getBoundingClientRect().bottom,$(window).innerHeight())
+      if(maxLi.getBoundingClientRect().bottom < $(window).innerHeight()){
+        if(onOff){
+          onOff = false;
+          num++;
+          console.log(num);
+          scroll();
+        }
+      }
+      
+      
+    });
+    function scroll(){
+      $.ajax({
+        dataType:'jsonp',
+        url:'http://www.wookmark.com/api/json/popular?callback=?',
+        data:'page=' + num,
+        success:function(data){
+          //在循环里面看一看，每个li被内容撑开的高度是多少，去对比出最短的li
+          //渲染完之后，要找到谁最短。
+          // console.time('计时器');
+          $.each(data,(index,ele)=>{
+            let H = ele.height*(w/ele.width);
+            let li = $('<div class="pic"></div>');
+            let $img = $(`<img src="${ele.preview}" height="${H}">`);
+            $img[0].onload = function(){
+              let maxLi = maxIndex();
+              li.append($img);
+              $(maxLi).append(li);
+            };
+          });
+          onOff = true;
+          // console.timeEnd('计时器');
+          //console.log(data);
+        }
+      });
+    }
+    
+    
+    function maxIndex(){
+      let maxNum = Infinity;
+      let li = null;
+      for(let i = 0 ; i < $list.length ;i++){
+        if($list[i].scrollHeight < maxNum){
+          maxNum = $list[i].scrollHeight;
+          li = $list[i];
+        }
+      }
+      return li;
+    }
+    
+    
+    
+  </script>
+  </body>
+</html>
